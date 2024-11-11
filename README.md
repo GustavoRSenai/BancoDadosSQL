@@ -33,7 +33,7 @@ CREATE TABLE editora (
 #### 1.3 Criando a tabela 'autora'
 
 ```
-CREATE TABLE editora (
+CREATE TABLE autora (
     id_autor INT PRIMARY KEY AUTO_INCREMENT,
     nome_autor VARCHAR(100) NOT NULL,
     data_nascimento DATE
@@ -49,11 +49,26 @@ CREATE TABLE assunto (
 );
 ```
 
-#### 1.5 Criando a tabela 'assunto'
+#### 1.5 Criando a tabela 'livro'
 
 ```
 CREATE TABLE livro (
-    id_ INT PRIMARY KEY AUTO_INCREMENT,
-    descricao VARCHAR(500) NOT NULL
+    id_livro INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+    ano_publicacao YEAR,
+    FOREING KEY (id_editora) REFERENCES editora(id_editora),
+    FOREING KEY (id_autor) REFERENCES autor(id_autor),
+    FOREING KEY (id_assunto) REFERENCES assunto(id_assunto),
+);
+```
+
+#### 1.6 Criando a tabela 'extra'
+
+```
+CREATE TABLE livro (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    produtos VARCHAR(50),
+    quantidade INT(200),
+    preco DOUBLE NOT NULL
 );
 ```
