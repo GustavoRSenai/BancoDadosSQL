@@ -175,3 +175,17 @@ JOIN editora ON livro.id_editora = editora.id_editora
 JOIN autor ON livro.id_autor = autor.id_autor
 JOIN assunto ON livro.id_assunto = assunto.id_assunto;
 ```
+
+#### Passo 7.2: usar apenas livros do mesmo nicho
+usando o 'WHERE' para especificar o que se deseja visualizar.
+
+```SQL
+SELECT  livro.titulo AS titulo,
+        assunto.descricao AS tema
+FROM livro
+JOIN assunto ON livro.assunto = assunto.id_assunto
+WHERE assunto.id_assunto = 4;
+```
+
+
+
