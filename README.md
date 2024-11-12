@@ -105,3 +105,24 @@ VALUES
 ('Editora Beta', 'Portugal'),
 ('Editora Bertrand Brasil', 'Brasil')
 ```
+
+#### 4.2 Inserindo dados na tabela 'autor'
+
+```SQL
+INSERT INTO autor(nome_autor, data_nascimento, email)
+VALUES
+('Jorge Amado', '1912-08-10', 'jorginho@email.com'),
+('Machado de Assis', '1839-06-21', 'machadinho@email.com'),
+('Matt Haig', '1975-06-03', 'matt@email.com')
+```
+
+#### 4.3 Inserindo dados na tabela 'assunto'
+
+```SQL
+INSERT INTO assunto(descricao)
+VALUES
+('Ficção'),
+('Mistério'),
+('Terror'),
+('Romance')
+```
