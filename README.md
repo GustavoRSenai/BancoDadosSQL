@@ -80,5 +80,14 @@ Após a criação da tabela, podemos adicionar novos campos. Vamos adicionar uma
 ```SQL
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
-
 ```
+
+## Passo 3: Remover tabela usando 'DROP'
+Se precisarmos remover uma tabela usamos o comando 'DROP'.
+Neste exemplo vamos remover a tabela 'extra'
+
+```SQL
+DROP TABLE extra;
+```
+
+## Passo 4: 
