@@ -1,4 +1,3 @@
-
 CREATE DATABASE biblioteca;
 USE biblioteca;
 
@@ -14,14 +13,10 @@ CREATE TABLE autor (
     data_nascimento DATE
 );
 
-
-
 CREATE TABLE assunto (
     id_assunto INT PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(500) NOT NULL
 );
-
-
 
 CREATE TABLE livro (
     id_livro INT PRIMARY KEY AUTO_INCREMENT,
@@ -42,11 +37,8 @@ CREATE TABLE Extra (
     preco DOUBLE NOT NULL
 );
 
-
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
-
-
 
 DROP TABLE extra;
 
@@ -55,7 +47,6 @@ VALUES
 ('Editora Alfa', 'Brasil'),
 ('Editora Beta', 'Portugal'),
 ('Editora Bertrand Brasil', 'Brasil');
-
 
 INSERT INTO autor(nome_autor, data_nascimento, email)
 VALUES
@@ -99,7 +90,3 @@ SELECT  livro.titulo AS titulo,
 FROM livro
 JOIN assunto ON livro.assunto = assunto.id_assunto
 WHERE assunto.id_assunto = 4;
-
-
-
-
