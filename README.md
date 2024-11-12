@@ -33,7 +33,7 @@ CREATE TABLE editora (
 #### 1.3 Criando a tabela 'autora'
 
 ```SQL
-CREATE TABLE autora (
+CREATE TABLE autor (
     id_autor INT PRIMARY KEY AUTO_INCREMENT,
     nome_autor VARCHAR(100) NOT NULL,
     data_nascimento DATE
@@ -56,16 +56,19 @@ CREATE TABLE livro (
     id_livro INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(150) NOT NULL,
     ano_publicacao YEAR,
-    FOREING KEY (id_editora) REFERENCES editora(id_editora),
-    FOREING KEY (id_autor) REFERENCES autor(id_autor),
-    FOREING KEY (id_assunto) REFERENCES assunto(id_assunto),
+    editora INT,
+    autor INT,
+    assunto INT,
+    FOREIGN KEY(editora) REFERENCES editora(id_editora),
+    FOREIGN KEY(autora) REFERENCES autor(id_autor),
+    FOREIGN KEY(assunto) REFERENCES assunto(id_assunto)
 );
 ```
 
 #### 1.6 Criando a tabela 'extra'
 
 ```SQL
-CREATE TABLE livro (
+CREATE TABLE Extra (
     id INT PRIMARY KEY AUTO_INCREMENT,
     produtos VARCHAR(50),
     quantidade INT(200),
