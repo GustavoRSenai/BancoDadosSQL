@@ -93,4 +93,15 @@ Neste exemplo vamos remover a tabela 'extra'
 DROP TABLE extra;
 ```
 
-## Passo 4: 
+## Passo 4: Inserindo dados usando 'INSERT'
+Agora que as tabelas já estão prontas, vamos inserir dados nelas.
+
+#### 4.1 Inserindo dados na tabela 'editora'
+
+```SQL
+INSERT INTO editora(nome_editora, pais)
+VALUES
+('Editora Alfa', 'Brasil'),
+('Editora Beta', 'Portugal'),
+('Editora Bertrand Brasil', 'Brasil')
+```
