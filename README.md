@@ -133,5 +133,7 @@ VALUES
 INSERT INTO livro (titulo, ano_publicacao, editora, autor, assunto)
 VALUES
 ('Capitães da Areia', '1937', 1, 1, 4),
-('Dom Casmuro', '1899', 2, 2, 4);
+('Dom Casmuro', '1899', 2, 2, 4),
+('Biblioteca da meia noite', '2020', 3, 3 ,1),
+('Memorias postumas de Brás Cubas', '1881', 1, 2, 4);
 ```
